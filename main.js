@@ -82,7 +82,6 @@ function renderCarrito() {
         })
 
         const producto = document.createElement("p")
-        const totalNode = document.createElement("p")
         producto.innerHTML = `${elemento.nombre} - $${elemento.precio * elemento.cantidad} x ${elemento.cantidad}`
 
         carrito.append(producto, btnCantidadSuma, btnEliminar, btnCantidad)

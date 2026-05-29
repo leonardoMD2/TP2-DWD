@@ -34,7 +34,7 @@ python -m http.server 8080
 npx serve .
 ```
 
-Luego abrí `http://localhost:8080` en el navegador.
+Luego abrír `http://localhost:8080` en el navegador.
 
 # Módulos ES6: named exports vs default export
 
@@ -363,7 +363,7 @@ function renderCarrito() {
 }
 ```
 
-**Guard clause**
+**Validacion del carrito**
 
 ```js
 if (favoritos.length == 0) {
@@ -471,7 +471,6 @@ carrito.append(producto, btnCantidadSuma, btnEliminar, btnCantidad)
 
 `forEach` recorre `favoritos` y por cada producto crea un `<p>` con su nombre, el precio total de ese ítem (precio unitario * cantidad) y la cantidad. Por ejemplo: `Auto 1 - $4444 x 2`. Los tres botones se insertan después del texto del producto.
 
-**Nota**: se crea un `totalNode` con `document.createElement("p")` pero nunca se usa ni se inserta en el DOM. Es código muerto que quedó probablemente como intención de mostrar el total por ítem, pero solo se muestra el total general en `totalCarrito`.
 
 **Actualización del total en el DOM**
 
