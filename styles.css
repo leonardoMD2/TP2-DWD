@@ -1,0 +1,180 @@
+/* ── Reset ── */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ── Base ── */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f0f7ff;
+    color: #2c3e50;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #7f8c9b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ── Productos ── */
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.productos article {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid #c8dff5;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.productos article:hover {
+    box-shadow: 0 4px 14px rgba(127, 184, 224, 0.15);
+    transform: translateY(-2px);
+}
+
+.productos p {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.productos .precio {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #6fb1d9;
+}
+
+/* ── Botón Agregar ── */
+
+.productos button {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 1px solid #c8dff5;
+    border-radius: 8px;
+    background: #7fb8e0;
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.productos button:hover {
+    background: #5ba3d9;
+    border-color: #5ba3d9;
+}
+
+.productos button:active {
+    background: #4a90c4;
+    border-color: #4a90c4;
+    transform: scale(0.98);
+}
+
+/* ── Carrito ── */
+
+.carrito {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid #c8dff5;
+    margin-bottom: 1rem;
+}
+
+.carrito p {
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+    color: #2c3e50;
+    border-bottom: 1px solid #e4f0fb;
+}
+
+.carrito p:last-child {
+    border-bottom: none;
+}
+
+/* ── Botones del Carrito (+, -, X) ── */
+
+.carrito button {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #c8dff5;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #7fb8e0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    margin-right: 0.3rem;
+}
+
+.carrito button:hover {
+    background: #f0f7ff;
+    border-color: #7fb8e0;
+    color: #5ba3d9;
+}
+
+.carrito button:active {
+    background: #e4f0fb;
+    color: #4a90c4;
+}
+
+/* ── Total ── */
+
+.totalCarrito {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: right;
+    color: #2c3e50;
+    padding: 0.75rem 1.5rem;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #c8dff5;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+
+    .productos {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 0.75rem;
+    }
+
+    .productos article {
+        padding: 1rem;
+    }
+
+    .carrito button {
+        padding: 0.35rem 0.65rem;
+        font-size: 0.75rem;
+    }
+}
